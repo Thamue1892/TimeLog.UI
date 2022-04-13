@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tirisan
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <div class="col-md-4" *ngFor="let project of projects">
+      <!--          <app-item [productItem]="product.name"></app-item>-->
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Project Name: {{project.name}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content href="#" [routerLink]="['edit-time/{{project.Id}']">
+          Time Logged: {{project.time}}
+        </ion-card-content>
+      </ion-card>
+
+    </div>
+  </div>
+</ion-content>
